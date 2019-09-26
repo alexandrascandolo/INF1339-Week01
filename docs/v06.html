@@ -39,6 +39,15 @@
                 //Their names are always Math.something
                 quotient = Math.floor(quotient/2)
             }
+            //The above algorithm leaves off the leading zeros
+            //and fails completely on converting 0 base 10.
+            //To fix this we can "pad" the output with lading zeros
+            //We will use a while loo (since we don't want any
+            //padding if the output is already four digits) 
+            //and a "method" we can add to any character string variable
+            //called length—it just reports the length of the 
+            //string
+            while (output.length < 4){output = '0' + output}
             return (output)
         }
 
