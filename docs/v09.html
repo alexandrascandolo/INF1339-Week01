@@ -50,12 +50,12 @@
             //"compute" the value of the logival expression for ach segment
             //our expression for A was ~wyz + w~x~y + ~w~y~z + ~wy
             var a = !w&x&z || w&!x&!y || !x&!y&!z || !w&y 
-            var b = !w&!x&!y || !w&!x&y || !w&x || !y&!z
-            var c = !w&!y || !w&!y&!z || !w&!x&y || w&!x&!y
-            var d = !x&!y&!z || !y&z || !w&!x&y || !w&y&!z
-            var e = !x&!y&!z || !w&y&!z
-            var f = !w&!y&!z || !w&x&!y || w&!x&!y
-            var g = !w&!x&y || !w&x&!y || w&!x&y
+            var b = !w&!x&!y || !y&!z || !w&!x&y || !w&x
+            var c = !w&!y || w&!x&!y || !w&x&y || !w&y&z
+            var d = !w&!x ||!w&y&!z || !y&z || w&!x&!y
+            var e = !x&!y&!z || !x&y&!z
+            var f = !w&!y&!z || !w&x || w&!x&!y
+            var g = !w&!x&y || !w&x&!y || w&!x&!y || !w&x
             //assemble and return the output
             //we will build up the output string element by element
             var output = ''
